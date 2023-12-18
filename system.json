@@ -1,0 +1,30 @@
+{
+    "id": "onyria",
+    "version": "0.0.1",
+    "title": "Onyria World",
+    "url": "https://github.com/LenRenko/onyria",
+    "description": "A system for the hombrew Onyria world",
+    "license": "LICENSE.txt",
+    "authors": [{
+        "name": "LenRenko",
+        "url": "https://github.com/LenRenko"
+    }],
+    "esmodules": [],
+    "styles": [],
+    "packs": [],
+    "languages": [{
+        "lang": "fr",
+        "name": "Français",
+        "path": "lang/fr.json"
+    }],
+    "compatibility": {
+        "minimum": "11",
+        "verified": "11"
+    },
+    "gridDistance": 5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "PV",
+    "secondaryTokenAttribute": "PM",
+    "manifest": "https://github.com/LenRenko/onyria/master/system.json",
+    "download": ""
+}
