@@ -3,14 +3,14 @@
     "version": "0.0.1",
     "title": "Onyria World",
     "url": "https://github.com/LenRenko/onyria",
-    "description": "A system for the hombrew Onyria world",
+    "description": "A system for the homebrew Onyria world",
     "license": "LICENSE.txt",
     "authors": [{
         "name": "LenRenko",
         "url": "https://github.com/LenRenko"
     }],
-    "esmodules": [],
-    "styles": [],
+    "esmodules": ["onyria.js"],
+    "styles": ["styles/onyria.css"],
     "packs": [],
     "languages": [{
         "lang": "fr",

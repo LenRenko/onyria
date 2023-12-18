@@ -1,4 +1,81 @@
 {
     "Actor": {},
-    "Item": {}
+    "Item": {
+        "types": ["item", "competence", "trait", "savoir", "classe", "origin"],
+        "htmlFields": ["description"],
+        "templates": {
+            "base": {
+                "description": "",
+                "source": "",
+                "note": ""
+            },
+            "competence": {
+                "level": 0,
+                "range": 0,
+                "school": "",
+                "cost": "",
+                "duration": 0,
+                "ritual": false
+            },
+            "equipement": {
+                "defBase": 0,
+                "dmgBase": 0,
+                "hands": 1,
+                "range": 0,
+                "equiped": false,
+                "slot": "",
+                "qty": 1,
+                "price": 0,
+                "properties": {
+                    "ranged": false,
+                    "equipable": false,
+                    "stackable": false,
+                    "unique": false,
+                    "2Handed": false,
+                    "equipement": false,
+                    "weapon": false,
+                    "protection": false
+                }
+            },
+            "stats": {
+                "fo": 0,
+                "at": 0,
+                "in": 0,
+                "pe": 0,
+                "di": 0,
+                "ct": 0,
+                "ch": 0,
+                "lc": 0,
+                "CaC": 0,
+                "DiS": 0,
+                "MaG": 0,
+                "EsQ": 0
+            }
+        },
+        "item": {
+            "templates": ["base", "equipement"],
+            "subtype": ""
+        },
+        "competence": {
+            "templates": ["base", "competence"],
+            "subtype": ""
+        },
+        "trait": {
+            "templates": ["base"]
+        },
+        "savoir": {
+            "templates": ["base", "stats"],
+            "type": "",
+            "adding": ""
+        },
+        "classe": {
+            "templates": ["base", "stats"],
+            "subtype":""
+        },
+        "origin": {
+            "templates": ["base", "stats"],
+            "subrace": "",
+            "place": ""
+        }
+    }
 }
