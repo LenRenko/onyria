@@ -1,2 +1,2 @@
-# fvtt_onyria
+# onyria
 FoundryVTT Onyria Hombrew System
