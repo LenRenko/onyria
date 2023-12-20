@@ -1,0 +1,78 @@
+<div class="form-group">
+    <label>{{localize "ONYRIA.ui.properties"}}</label>
+    <div class="form-fields">
+        <label class="checkbox"> <input type="checkbox" name="system.properties.equipable" {{checked system.properties.equipable}}> {{localize "ONYRIA.ui.equipable"}}</label>
+{{#if (not system.properties.unique)}}
+        <label class="checkbox"> <input type="checkbox" name="system.properties.stackable" {{checked system.properties.stackable}}> {{localize "ONYRIA.ui.stackable"}}</label>
+{{/if}}
+{{#if (not system.properties.stackable)}}
+        <label class="checkbox"> <input type="checkbox" name="system.properties.unique"    {{checked system.properties.unique}}> Unique </label>
+{{/if}}
+        <label class="checkbox"><input type="checkbox" name="system.properties.2h" {{checked system.properties.2h}}> {{localize "ONYRIA.ui.2Handed"}}</label>
+
+{{#if (not (or (equals system.subtype "melee") (equals system.subtype "ranged")) ) }}
+        <label class="checkbox"><input type="checkbox" name="system.properties.weapon" {{checked system.properties.weapon}}> {{localize "ONYRIA.properties.damage"}}</label>
+        <label class="checkbox"><input type="checkbox" name="system.properties.ranged" {{checked system.properties.ranged}}> {{localize "ONYRIA.properties.ranged"}}</label>
+ {{/if}}
+ {{#if (not (or (equals system.subtype "shield") (equals system.subtype "armor")) ) }}
+        <label class="checkbox"><input type="checkbox" name="system.properties.protection" {{checked system.properties.protection}}> {{localize "ONYRIA.properties.protection"}}</label>
+ {{/if}}
+   </div>
+</div>
+{{#if system.properties.equipable}}
+    <div class="form-group">
+        <label>{{localize "ONYRIA.ui.slot"}}</label>
+        <div class="form-fields">
+            <select name="system.slot" data-type="String" style="width:100%">
+                {{#select system.slot}}
+                    <option value="">{{localize "ONYRIA.None"}}</option>
+                    <option value="hand">{{localize "ONYRIA.slot.hand"}}</option>
+                    <option value="head">{{localize "ONYRIA.slot.head"}}</option>
+                    <option value="ear">{{localize "ONYRIA.slot.ear"}}</option>
+                    <option value="neck">{{localize "ONYRIA.slot.neck"}}</option>
+                    <option value="shoulders">{{localize "ONYRIA.slot.shoulders"}}</option>
+                    <option value="chest">{{localize "ONYRIA.slot.chest"}}</option>
+                    <option value="back">{{localize "ONYRIA.slot.back"}}</option>
+                    <option value="arm">{{localize "ONYRIA.slot.arm"}}</option>
+                    <option value="finger">{{localize "ONYRIA.slot.finger"}}</option>
+                    <option value="wrist">{{localize "ONYRIA.slot.wrist"}}</option>
+                    <option value="waist">{{localize "ONYRIA.slot.waist"}}</option>
+                    <option value="legs">{{localize "ONYRIA.slot.legs"}}</option>
+                    <option value="feet">{{localize "ONYRIA.slot.feet"}}</option>
+                    <option value="belt">{{localize "ONYRIA.slot.belt"}}</option>
+                    <option value="backpack">{{localize "ONYRIA.slot.backpack"}}</option>
+                    <option value="quiver">{{localize "ONYRIA.slot.quiver"}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </div>
+{{/if}}
+<div class="form-group">
+    <label>{{ localize "ONYRIA.ui.price" }}</label>&nbsp; <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number"/>
+</div>
+<div class="form-group">
+    <label>{{ localize "ONYRIA.ui.rarity" }}</label>&nbsp; <select name="system.rarity" data-type="String" style="width:100%">
+    {{#select system.rarity}}
+        <option value="">{{localize "ONYRIA.None"}}</option>
+        <option value="common">{{localize "ONYRIA.rarity.common"}}</option>
+        <option value="moderate">{{localize "ONYRIA.rarity.moderate"}}</option>
+        <option value="rare">{{localize "ONYRIA.rarity.rare"}}</option>
+        <option value="very-rare">{{localize "ONYRIA.rarity.very-rare"}}</option>
+        {{#if (not system.properties.stackable)}}<option value="unique">{{localize "ONYRIA.rarity.unique"}}</option>{{/if}}
+    {{/select}}
+</select>
+</div>
+{{#if system.properties.stackable}}
+    <div class="form-group">
+        <label>{{ localize "ONYRIA.ui.quantity" }}</label>
+        <div class="form-fields">
+            <input type="number" name="system.qty" value="{{system.qty}}" placeholder="{{localize "ONYRIA.ui.quantity"}}" data-dtype="Number"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>{{localize "ONYRIA.ui.qtymax"}}</label>
+        <div class="form-fields">
+            <input name="system.qtymax" type="text" value="{{system.qtymax}}" placeholder="{{localize "ONYRIA.placeholders.qtymax"}}" data-dtype="Number">
+        </div>
+    </div>
+{{/if}}

@@ -1,0 +1,43 @@
+<div class="flexrow no-wrap stats">
+    <div class="sidebar flex1 pos_relative">
+        <div class="attrvertalign">
+            <img class="profession-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
+    </div>
+    <div class="flexrow flex3">
+        {{#if (or (isOnyriaTypeSetting "onyria") (isOnyriaTypeSetting "stars"))}}
+        <div class="flex1 layout center carac pos_relative">
+            <!-- STATS -->
+            {{> "systems/onyria/templates/actors/character/parts/stats/character-attributes.hbs"}}
+        </div>
+        {{/if}}
+
+        {{#if (isEnabled "allowInitiative")}}
+         <div class="flex1 layout center hpcol1 pos_relative">
+            <!-- HP -->
+            {{> "systems/onyria/templates/actors/character/parts/stats/character-hp-init.hbs"}}
+        </div>
+        <div class="flex1 layout center hpcol pos_relative">
+            <!-- HP -->
+            {{> "systems/onyria/templates/actors/character/parts/stats/character-initiative.hbs"}}
+        </div>
+        {{else}}
+        <div class="flex1 layout center hpcol pos_relative">
+            <!-- HP -->
+            {{> "systems/onyria/templates/actors/character/parts/stats/character-hp.hbs"}}
+        </div>
+        {{/if}}
+        <div class="flex1 layout center degatcol pos_relative">
+            <!-- ATTAQUES -->
+            {{> "systems/onyria/templates/actors/character/parts/stats/character-attacks.hbs"}}
+        </div>
+        
+    </div>
+</div>
+
+<div class="flexrow no-wrap description_row">
+    <div class="flexcol"> 
+        <div class="form-header">{{ localize "ONYRIA.details.description" }}</div>
+        {{editor biographyHTML target="system.description" button=true owner=owner editable=editable}}
+    </div>
+</div>

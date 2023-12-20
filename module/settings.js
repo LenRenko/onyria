@@ -1,0 +1,141 @@
+import cardsSettingMenu from './cards/cardSettingMenu.js';
+
+export const registerSystemSettings = function() {
+
+    game.settings.register("onyria", "onyriaVersion", {
+        name: "Choisissez la version d'Onyria",
+        hint: "",
+        scope: "world", // This specifies a world-level setting
+        config: true,   // This specifies that the setting appears in the configuration view
+        type: String,
+        choices: {           // If choices are defined, the resulting setting will be a select menu
+            "onyria": "Onyria",
+            "stars": "Stars",
+            "contemporain": "Contemporain",
+          },
+          default: "onyria",        // The default value for the setting
+          requiresReload: true
+        });
+
+        game.settings.register("onyria", "showBonusCol", {
+          name: "Afficher la colonne Bonus/Malus",
+          hint: "Ajoute la colonne pour les compétences",
+          scope: "world",
+          config: true,
+          default: true,
+          type: Boolean,
+          requiresReload: true
+      });
+
+      game.settings.register("onyria", "moveItem", {
+        name: "Mode de déplacement des items",
+        hint: "Comportement du drag & drop d'un item sur une fiche de personnage (Maintenir MAJ lors du drop pour inverser)",
+        scope: "world",
+        type: String,
+        choices: {
+            "0" : "Clonner l'item",
+            "1" : "Déplacer l'item"
+        },
+        default: "1",
+        config: true,
+        requiresReload: true
+    }); 
+	
+        game.settings.register("onyria", "showOrigine", {
+          name: "Afficher l'origine",
+          hint: "Afficher l'origine sur la feuille de personnage",
+          scope: "world",
+          config: true,
+          default: true,
+          type: Boolean,
+          requiresReload: true
+      });
+	  
+        game.settings.register("onyria", "showGenialMais", {
+          name: "Afficher le background",
+          hint: "Fait apparaitre \"Je suis génial parce que\" et \"Mais la société à des problème avec moi parce que\"",
+          scope: "world",
+          config: true,
+          default: true,
+          type: Boolean,
+          requiresReload: true
+      });
+	  
+        game.settings.register("onyria", "showBourse", {
+          name: "Afficher la bourse",
+          hint: "Fait apparaitre la bourse au dessus de l'inventaire",
+          scope: "world",
+          config: true,
+          default: true,
+          type: Boolean,
+          requiresReload: true
+      });
+	  
+        game.settings.register("onyria", "allowEditComp", {
+          name: "Edition des compétences",
+          hint: "Fait apparaitre des icones pour éditer, supprimer ou ajouter des compétences sur la fiche de personnage (n'affecte pas les compétences spéciales)",
+          scope: "world",
+          config: true,
+          default: true,
+          type: Boolean,
+          requiresReload: true
+      });
+
+      game.settings.register("onyria", "allowInitiative", {
+        name: "Utilisation de l'initiative (Règles avancées)",
+        hint: "Fait apparaitre l'initiative sur la fiche de personnage",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        requiresReload: true
+    });
+
+    game.settings.register("onyria", "hideCompLink", {
+      name: "Masquer les liens des compétences (Règles avancées)",
+      hint: "Dans les règles avancées les compétences ne sont plus liées aux caractéristiques",
+      scope: "world",
+      config: true,
+      default: false,
+      type: Boolean,
+      requiresReload: true
+  });
+
+  game.settings.register("onyria", "carac100", {
+    name: "Caractéristiques sur 100 (Règles avancées)",
+    hint: "Dans les règles avancées les caractéristiques sont également des pourcentage, de plus un bonus de dégat et calculer automatiquement en fonctions de la Force et de la Dextérité ",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    requiresReload: true
+});
+
+
+    // the deck setting menu
+    game.settings.registerMenu("onyria", "cardSetting", {
+      name: "Configuration des paquets de cartes de Magie",
+      label: "Configurer", // The text label used in the button
+      hint: "Configuration des paquets de cartes de Magie",
+      icon: "fas fa-bars",
+      title: "Configuration des paquets de cartes de Magie", // A Font Awesome icon used in the submenu button
+      type: cardsSettingMenu, // A FormApplication subclass
+      restricted: true // only GM can manage default decks
+  });
+
+    // the deck setting 
+    game.settings.register('onyria', 'deckSetting', {
+      scope: 'world',
+      config: false,
+      type: Object,
+      default: {
+          decksByActorID: {},
+          handsByActorID: {},
+          discardsByActorID: {},
+          actorsByDeckID: {},
+          actorsByHandsID: {},
+          actorsByDiscardsID: {}
+      }
+  });
+
+};

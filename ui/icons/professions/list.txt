@@ -1,0 +1,1 @@
+/systems/onyria/ui/icons/professions/profession.webp

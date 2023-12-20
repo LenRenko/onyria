@@ -1,0 +1,25 @@
+
+<div class="attrvertalign col_carac">
+    <div id="carac_img" ></div>
+
+ <div class="carac_block" >
+        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-str.hbs"}}
+        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-dex.hbs"}}
+        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-end.hbs"}}
+        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-int.hbs"}}
+        {{#if (isOnyriaTypeSetting "onyria")}}
+        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-cha.hbs"}}
+        {{/if}}
+        {{#if (isOnyriaTypeSetting "stars")}}
+        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-intu.hbs"}}
+        {{/if}}
+</div>
+
+{{#if (isEnabled "carac100")}}
+{{else}}
+     <div class="calc-comp"><i class="fas fa-address-card"></i><span class="calc-comp-tooltip"><p>Calcul automatique des compétence</p></span></div>
+{{/if}}  
+
+</div>
+
+

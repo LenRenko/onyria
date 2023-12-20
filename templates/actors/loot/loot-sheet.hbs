@@ -1,0 +1,68 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{#if (isOnyriaTypeSetting "onyria")}}
+    <div class="wrap onyria-bg-std">
+    {{/if}}
+    {{#if (isOnyriaTypeSetting "stars")}}
+    <div class="wrap onyria-bg-stars">
+    {{/if}}
+    {{#if (isOnyriaTypeSetting "contemporain")}}
+    <div class="wrap onyria-bg-modern">
+    {{/if}}   
+
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-left"></div>
+                    {{#if (isOnyriaTypeSetting "onyria")}}
+                    <div class="flex1 center" id="logo-banner"><img src="/systems/onyria/ui/couronne.png"/></div>
+                    {{/if}}
+                    {{#if (isOnyriaTypeSetting "stars")}}
+                    <div class="flex1 center" id="logo-stars"><img src="/systems/onyria/ui/STARS.webp"/></div>
+                    {{/if}}
+                    {{#if (isOnyriaTypeSetting "contemporain")}}
+                    <div class="flex1 center" id="logo-modern"><img src="/systems/onyria/ui/contemporain.webp"/></div>
+                    {{/if}}                   
+                <div class="flex1 right" id="banner-right"></div>
+            </div>
+        </div>
+
+{{> "systems/onyria/templates/actors/loot/parts/loot-header.hbs"}}  
+
+{{#if (isOnyriaTypeSetting "onyria")}}
+    <div class="flexrow main mainLootHeight_std">
+    {{/if}}
+    {{#if (isOnyriaTypeSetting "stars")}}
+    <div class="flexrow main mainLootHeight_stars">
+    {{/if}}
+    {{#if (isOnyriaTypeSetting "contemporain")}}
+    <div class="flexrow main mainLootHeight_modern">
+    {{/if}}  
+        <div class="content flex3">
+            {{!-- Sheet Tab Navigation --}}
+            <nav class="sheet-tabs tabs nameLoot" data-group="primary">
+                <div class="item nameLoot" data-tab="inventory">
+                    <input class="field-value charname" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
+                </div>
+            </nav>
+            {{!-- Sheet Body --}}
+            <section class="sheet-body">
+                {{!-- Inventory Tab --}}
+                <div class="tab inventory" data-group="primary" data-tab="inventory">
+                    {{> "systems/onyria/templates/actors/loot/parts/inventory/loot-inventory.hbs"}}
+                </div>
+            </section>
+        </div>
+ </div>
+
+
+        {{#if (isOnyriaTypeSetting "onyria")}}
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-bot-left"></div>
+                 <div class="flex1 center" id="logo-orbe"><img src="/systems/onyria/ui/orbe.png"/></div>
+                <div class="flex1 right" id="banner-bot-right"></div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</form>
+

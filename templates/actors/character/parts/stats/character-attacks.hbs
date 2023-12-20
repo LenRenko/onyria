@@ -1,0 +1,86 @@
+<div class="attrvertalign">
+
+    {{#if (useMagic actor)}}
+        <div class="flexcol">
+            <img class="carte_magie" src="/systems/onyria/ui/cartesMagie.webp"/>
+        </div>
+    {{/if}}
+
+     {{#if (isOnyriaTypeSetting "stars")}}  
+    <div class="flexcol no-wrap">
+        <div id="mental_icon" class="flex1 center">
+            <input class="field-label-icon-mental field-value" name="system.attributes.mental.value" type="text" value="{{system.attributes.mental.value}}" placeholder="0" data-dtype="Number"/>
+        </div>
+        <div class="flex1 center">
+            <div class="field-label">{{ localize 'ONYRIA.attributes.mental.label' }}</div>
+        </div>
+    </div>
+    {{/if}} 
+
+
+
+    {{#if (notEmpty (getEquipedWeapons actor.items))}}
+    {{#each (getEquipedWeapons actor.items) as |weapon id|}}
+        <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.system.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-weapon-img="{{weapon.img}}" data-roll-type="weapon">
+            <div class="flex1 center">
+                {{weapon.name}}
+            </div>
+            <div id="degat_icon" class="flex2 center">
+                <div class="field-label-icon-attack field-value">
+                {{ splitWeaponDice weapon.system.dmgBase }}
+                </div>
+            </div>
+            <div class="center">
+                <div class="field-label-icon-attack field-value weaponMod">
+                     {{#if (splitWeaponMod weapon.system.dmgBase) }}
+                     +{{ splitWeaponMod weapon.system.dmgBase }}
+                     {{/if}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    {{else}}
+        <p>Aucune arme équipée</p>
+    {{/if}}
+
+
+
+
+    {{#if (isEnabled "showOrigine")}}
+
+        <div class="flexcol">
+
+
+        <div class="flex1 center">
+            <span class="field-label">Origine</span>
+        </div>
+
+        {{#if (isOnyriaTypeSetting "onyria")}}
+                <div class="flex2 center cell drop-field onyria-compendium-pack" data-pack="onyria.origines" data-open="0">
+        {{/if}}
+
+        {{#if (isOnyriaTypeSetting "stars")}}
+                <div class="flex2 center cell drop-field onyria-compendium-pack" data-pack="onyria.originesstars" data-open="0">
+        {{/if}}
+
+        {{#if (isOnyriaTypeSetting "contemporain")}}
+            <div class="flex2 center cell drop-field onyria-compendium-pack" data-pack="onyria.originescont" data-open="0">
+        {{/if}}
+
+            {{#if (getOrigines actor.items)}}
+                {{#with (getOrigines actor.items)}}
+                    <span class="flex5 field-value origine_name">{{name}}</span>
+                    <div class="origines-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-times"></i></a>
+                    </div>
+                {{/with}}
+            {{else}}
+                    <span class="flex5 field-value origine_name">Inconnue</span>
+            {{/if}}
+            </div>
+        </div>
+	{{/if}}
+
+</div>
+
+

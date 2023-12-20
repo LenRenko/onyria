@@ -1,0 +1,49 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{#if (isOnyriaTypeSetting "onyria")}}
+    <div class="wrap onyria-bg-std">
+    {{/if}}
+    {{#if (isOnyriaTypeSetting "stars")}}
+    <div class="wrap onyria-bg-stars">
+    {{/if}}
+    {{#if (isOnyriaTypeSetting "contemporain")}}
+    <div class="wrap onyria-bg-modern">
+    {{/if}}   
+        <header class="sheet-header flexrow header-background no-wrap">
+            <img class="profession" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+            <div class="header-details flexrow">
+                <h1 class="charname">
+                    <input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/>
+                </h1>
+                <div class="item-subtitle">
+                    <h4 class="item-type">{{localize (concat "ONYRIA.category." item.type)}}</h4>
+                    <span class="item-status">
+                        {{#if item.system.subtype}}
+                            {{localize (concat "ONYRIA.category." item.system.subtype)}}
+                        {{/if}}
+                    </span>
+                </div>
+            </div>
+        </header>
+        {{!-- Sheet Body --}}
+        <section class="sheet-body">
+            <div class="form-header">{{localize "ONYRIA.details.description"}}</div>
+            <div class="flexrow description">
+                {{editor descriptionHTML target="system.description" button=true owner=owner editable=editable}}
+            </div>
+            <div class="details">
+                {{#if (equals item.type "item")}}
+                    {{> "systems/onyria/templates/items/parts/details/item-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "competence")}}
+                    {{> "systems/onyria/templates/items/parts/details/competence-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "profession")}}
+                    {{> "systems/onyria/templates/items/parts/details/profession-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "origine")}}
+                    {{> "systems/onyria/templates/items/parts/details/origines-details.hbs"}}
+                {{/if}}
+            </div>
+        </section>
+    </div>
+</form>

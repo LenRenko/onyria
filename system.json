@@ -1,30 +1,42 @@
 {
-    "id": "onyria",
-    "version": "0.0.1",
-    "title": "Onyria World",
-    "url": "https://github.com/LenRenko/onyria",
-    "description": "A system for the homebrew Onyria world",
-    "license": "LICENSE.txt",
-    "authors": [{
-        "name": "LenRenko",
-        "url": "https://github.com/LenRenko"
-    }],
-    "esmodules": ["onyria.js"],
-    "styles": ["styles/onyria.css"],
-    "packs": [],
-    "languages": [{
-        "lang": "fr",
-        "name": "Français",
-        "path": "lang/fr.json"
-    }],
-    "compatibility": {
-        "minimum": "11",
-        "verified": "11"
-    },
-    "gridDistance": 5,
-    "gridUnits": "m",
-    "primaryTokenAttribute": "PV",
-    "secondaryTokenAttribute": "PM",
-    "manifest": "https://github.com/LenRenko/onyria/master/system.json",
-    "download": ""
+  "id": "onyria",
+  "title": "Onyria ",
+  "description": "<p>Système Foundry VTT pour Onyria, mon RPG</p>",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "authors": [
+    {
+      "name": "LenRenko",
+      "url": "https://github.com/LenRenko/onyria"
+    }
+  ],
+  "esmodules": [
+    "module/onyria.js",
+    "module/hooks/system-ready.js",
+    "module/hooks/hotbar-drop.js"
+  ],
+  "styles": [
+    "css/onyria.css",
+    "css/cards.css"
+  ],
+  "packs": [],
+  "packFolders": [],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "socket": true,
+  "gridDistance": 2,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "attributes.hp",
+  "secondaryTokenAttribute": "attributes.pm",
+  "url": "https://github.com/LenRenko/onyria",
+  "manifest": "https://github.com/LenRenko/onyria/master/system.json",
+  "license": "licence.txt"
 }
