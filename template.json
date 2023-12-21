@@ -8,47 +8,131 @@
     "templates": {
       "stats": {
         "stats": {
-          "str" : {
-            "key" : "str",
-            "label" : "ONYRIA.stats.str.label",
-            "abbrev" : "ONYRIA.stats.str.abbrev",
+          "str": {
+            "key": "str",
+            "label": "ONYRIA.stats.str.label",
+            "abbrev": "ONYRIA.stats.str.abbrev",
             "base": 10,
             "value": 10
           },
-          "dex" : {
-            "key" : "dex",
-            "label" : "ONYRIA.stats.dex.label",
-            "abbrev" : "ONYRIA.stats.dex.abbrev",
+          "dex": {
+            "key": "dex",
+            "label": "ONYRIA.stats.dex.label",
+            "abbrev": "ONYRIA.stats.dex.abbrev",
             "base": 10,
             "value": 10
           },
-          "end" : {
-            "key" : "end",
-            "label" : "ONYRIA.stats.end.label",
-            "abbrev" : "ONYRIA.stats.end.abbrev",
+          "end": {
+            "key": "end",
+            "label": "ONYRIA.stats.end.label",
+            "abbrev": "ONYRIA.stats.end.abbrev",
             "base": 10,
             "value": 10
           },
-          "int" : {
-            "key" : "int",
-            "label" : "ONYRIA.stats.int.label",
-            "abbrev" : "ONYRIA.stats.int.abbrev",
+          "int": {
+            "key": "int",
+            "label": "ONYRIA.stats.int.label",
+            "abbrev": "ONYRIA.stats.int.abbrev",
             "base": 10,
             "value": 10
           },
-          "cha" : {
-            "key" : "cha",
-            "label" : "ONYRIA.stats.cha.label",
-            "abbrev" : "ONYRIA.stats.cha.abbrev",
+          "cha": {
+            "key": "cha",
+            "label": "ONYRIA.stats.cha.label",
+            "abbrev": "ONYRIA.stats.cha.abbrev",
             "base": 10,
             "value": 10
           },
-          "intu" : {
-            "key" : "intu",
-            "label" : "ONYRIA.stats.intu.label",
-            "abbrev" : "ONYRIA.stats.intu.abbrev",
+          "intu": {
+            "key": "intu",
+            "label": "ONYRIA.stats.intu.label",
+            "abbrev": "ONYRIA.stats.intu.abbrev",
             "base": 10,
             "value": 10
+          },
+          "force": {
+            "key": "force",
+            "label": "ONYRIA.stats.fo.label",
+            "abbrev": "ONYRIA.stats.fo.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "athletisme": {
+            "key": "athletisme",
+            "label": "ONYRIA.stats.at.label",
+            "abbrev": "ONYRIA.stats.at.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "intelligence": {
+            "key": "intelligence",
+            "label": "ONYRIA.stats.in.label",
+            "abbrev": "ONYRIA.stats.in.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "perception": {
+            "key": "perception",
+            "label": "ONYRIA.stats.pe.label",
+            "abbrev": "ONYRIA.stats.pe.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "discretion": {
+            "key": "discretion",
+            "label": "ONYRIA.stats.di.label",
+            "abbrev": "ONYRIA.stats.di.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "constitution": {
+            "key": "constitution",
+            "label": "ONYRIA.stats.ct.label",
+            "abbrev": "ONYRIA.stats.ct.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "charisme": {
+            "key": "charisme",
+            "label": "ONYRIA.stats.ch.label",
+            "abbrev": "ONYRIA.stats.ch.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "chance": {
+            "key": "chance",
+            "label": "ONYRIA.stats.lc.label",
+            "abbrev": "ONYRIA.stats.lc.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "cac": {
+            "key": "cac",
+            "label": "ONYRIA.stats.cac.label",
+            "abbrev": "ONYRIA.stats.cac.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "distance": {
+            "key": "distance",
+            "label": "ONYRIA.stats.dis.label",
+            "abbrev": "ONYRIA.stats.dis.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "magie": {
+            "key": "magie",
+            "label": "ONYRIA.stats.mag.label",
+            "abbrev": "ONYRIA.stats.mag.abbrev",
+            "base": 0,
+            "value": 0
+          },
+          "esquive": {
+            "key": "esquive",
+            "label": "ONYRIA.stats.esq.label",
+            "abbrev": "ONYRIA.stats.esq.abbrev",
+            "base": 0,
+            "value": 0
           }
         }
       },
@@ -58,9 +142,9 @@
         "mais": "",
         "attributes": {
           "hp": {
-            "key" : "hp",
-            "label" : "ONYRIA.attributes.hp.label",
-            "abbrev" : "ONYRIA.attributes.hp.abbrev",
+            "key": "hp",
+            "label": "ONYRIA.attributes.hp.label",
+            "abbrev": "ONYRIA.attributes.hp.abbrev",
             "base": 0,
             "bonus": 0,
             "value": 0,
@@ -76,55 +160,56 @@
             "max": 0
           },
           "def": {
-            "key" : "def",
-            "label" : "ONYRIA.attributes.def.label",
-            "abbrev" : "ONYRIA.attributes.def.abbrev",
+            "key": "def",
+            "label": "ONYRIA.attributes.def.label",
+            "abbrev": "ONYRIA.attributes.def.abbrev",
             "base": 0,
             "bonus": 0,
             "value": 0
           },
           "hit": {
-            "key" : "hit",
-            "label" : "ONYRIA.attributes.hit.label",
-            "abbrev" : "ONYRIA.attributes.hit.abbrev",
+            "key": "hit",
+            "label": "ONYRIA.attributes.hit.label",
+            "abbrev": "ONYRIA.attributes.hit.abbrev",
             "base": 0,
             "bonus": 0,
             "value": 0
           },
           "mental": {
-            "key" : "mental",
-            "label" : "ONYRIA.attributes.mental.label",
-            "abbrev" : "ONYRIA.attributes.mental.abbrev",
+            "key": "mental",
+            "label": "ONYRIA.attributes.mental.label",
+            "abbrev": "ONYRIA.attributes.mental.abbrev",
             "base": 0,
             "bonus": 0,
             "value": 0
           },
-          "initiative": 0
+          "initiative": 0,
+          "lelvel": 0
         },
         "currency": {
           "gp": {
-            "key" : "gp",
-            "label" : "ONYRIA.currency.gp.label",
-            "abbrev" : "ONYRIA.currency.gp.abbrev",
-            "qty" : 0
+            "key": "gp",
+            "label": "ONYRIA.currency.gp.label",
+            "abbrev": "ONYRIA.currency.gp.abbrev",
+            "qty": 0
           },
           "sp": {
-            "key" : "sp",
-            "label" : "ONYRIA.currency.sp.label",
-            "abbrev" : "ONYRIA.currency.sp.abbrev",
-            "qty" : 0
+            "key": "sp",
+            "label": "ONYRIA.currency.sp.label",
+            "abbrev": "ONYRIA.currency.sp.abbrev",
+            "qty": 0
           },
           "cp": {
-            "key" : "cp",
-            "label" : "ONYRIA.currency.cp.label",
-            "abbrev" : "ONYRIA.currency.cp.abbrev",
-            "qty" : 0
+            "key": "cp",
+            "label": "ONYRIA.currency.cp.label",
+            "abbrev": "ONYRIA.currency.cp.abbrev",
+            "qty": 0
           },
           "fp": {
-            "key" : "fp",
-            "label" : "ONYRIA.currency.fp.label",
-            "abbrev" : "ONYRIA.currency.fp.abbrev",
-            "qty" : 0
+            "key": "fp",
+            "label": "ONYRIA.currency.fp.label",
+            "abbrev": "ONYRIA.currency.fp.abbrev",
+            "qty": 0
           }
         },
         "alert": {
@@ -137,7 +222,10 @@
       "templates": [
         "stats",
         "common"
-      ]
+      ],
+      "renown": 0,
+      "ko": 0,
+      "ps": 0
     },
     "npc": {
       "templates": [
@@ -156,41 +244,68 @@
       "item",
       "competence",
       "origine",
-      "profession"
+      "profession",
+      "spell",
+      "trait",
+      "savoir"
     ],
     "templates": {
-      "base" : {
-        "description" : "",
-        "source" : ""
+      "base": {
+        "description": "",
+        "source": ""
       },
-      "equipment" : {
-        "defBase" : 0,
+      "equipment": {
+        "defBase": 0,
         "dmgBase": "",
         "hands": 1,
         "range": 0,
         "equiped": false,
         "slot": "",
-        "qty" : 1,
-        "qtymax" : null,
+        "qty": 1,
+        "qtymax": null,
         "price": 0,
         "properties": {
           "ranged": false,
           "equipable": false,
           "stackable": false,
-          "unique" : false,
-          "2Handed" : false,
-          "equipment" : false,
-          "weapon" : false,
-          "protection" : false
+          "unique": false,
+          "2Handed": false,
+          "equipment": false,
+          "weapon": false,
+          "protection": false
+        }
+      },
+      "bonus": {
+        "stats": {
+          "fo": 0,
+          "at": 0,
+          "in": 0,
+          "pe": 0,
+          "di": 0,
+          "ct": 0,
+          "ch": 0,
+          "lc": 0,
+          "cac": 0,
+          "dis": 0,
+          "mag": 0,
+          "esq": 0
+        }
+      },
+      "classBonus": {
+        "stats": {
+          "cac": 0,
+          "dis": 0,
+          "mag": 0,
+          "esq": 0
         }
       }
     },
-    "item" : {
+    "item": {
       "templates": [
         "base",
         "equipment"
       ],
-      "subtype" : ""
+      "subtype": ""
     },
     "competence": {
       "templates": [
@@ -202,28 +317,49 @@
       "link1": "",
       "link2": "",
       "score": 0,
-      "bonus":0
+      "bonus": 0
     },
     "profession": {
       "templates": [
-        "base"
+        "base",
+        "classBonus"
+      ],
+      "key": "",
+      "competences": [],
+      "subclass": ""
+    },
+    "origine": {
+      "templates": [
+        "base",
+        "bonus"
       ],
       "key": "",
       "competences": []
     },
-    "origine": {
+    "spell": {
+      "templates": ["base"],
+      "school": "",
+      "type": "",
+      "cost": 0,
+      "range": 0,
+      "target": 0,
+      "duration": 0,
+      "effect": ""
+    },
+    "trait": {
+      "templates": [
+        "base",
+        "bonus"
+      ],
+      "key": ""
+    },
+    "savoir": {
       "templates": [
         "base"
       ],
       "key": "",
-      "bonuses": {
-        "str" : 0,
-        "dex" : 0,
-        "end" : 0,
-        "int" : 0,
-        "cha" : 0
-      },
-      "competences": []
+      "type": "",
+      "effect": ""
     }
   }
 }

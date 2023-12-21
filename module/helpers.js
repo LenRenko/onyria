@@ -61,6 +61,24 @@ export const registerHandlebarsHelpers = function () {
         return ONYRIA.itemSubCategories;
     });
 
+    Handlebars.registerHelper('getSpellTypes', function(){
+        return ONYRIA.spellTypes;
+    })
+
+    Handlebars.registerHelper('getSpellSchools', function(){
+        return ONYRIA.spellSchools;
+    })
+
+    Handlebars.registerHelper('getCharStats', function(stats) {
+        let stat_label = Object.keys(ONYRIA.charStats)[stats]
+        return game.i18n.localize("ONYRIA.stats." + stat_label +".label");
+    })
+
+    Handlebars.registerHelper('getProfStats', function(stats) {
+        let stat_label = Object.keys(ONYRIA.charStats)[stats+8]
+        return game.i18n.localize("ONYRIA.stats." + stat_label +".label");
+    })
+
     Handlebars.registerHelper('getItemsBySubCategory', function (subCat, items) {
         let caps = items.filter(item => item.type === "item");
         let weapons = caps.filter(item => item.system.subtype == subCat);

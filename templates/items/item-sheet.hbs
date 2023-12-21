@@ -43,6 +43,15 @@
                 {{#if (equals item.type "origine")}}
                     {{> "systems/onyria/templates/items/parts/details/origines-details.hbs"}}
                 {{/if}}
+                {{#if (equals item.type "spell")}}
+                    {{> "systems/onyria/templates/items/parts/details/spell-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "trait")}}
+                    {{> "systems/onyria/templates/items/parts/details/trait-details.hbs"}}
+                {{/if}}
+                {{#if (equals item.type "savoir")}}
+                    {{> "systems/onyria/templates/items/parts/details/savoir-details.hbs"}}
+                {{/if}}
             </div>
         </section>
     </div>

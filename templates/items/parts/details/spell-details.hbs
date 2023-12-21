@@ -1,0 +1,60 @@
+<div class="flexcol">
+    <table class="table">
+        <tr>
+            <th>Ecole</th><td>
+                <select name="system.school" data-type="String">
+                    {{#select system.school}}
+                        <option value="">{{localize "ONYRIA.None"}}</option>
+                    {{#each (getSpellSchools)  as |name school|}}
+                        <option value="{{school}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </td>
+            <th>Type</th>
+            <td>
+                <select name="system.type" data-type="String">
+                    {{#select system.type}}
+                        <option value="">{{localize "ONYRIA.None"}}</option>
+                    {{#each (getSpellTypes)  as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="form-header">Statistiques</div>
+<div class="flexcol">
+    <table>
+        <tr>
+            <th>Cout</th>
+            <td>
+                <input style="width:40%;" type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number"/>
+            </td>
+             <td><p style="witdh:100%">{{localize "ONYRIA.attributes.pm.abbrev"}}</p></td>
+        </tr>
+        <tr>
+            <th>Portée</th>
+            <td>
+                <input style="width:40%;" type="number" name="system.range" value="{{system.range}}" data-dtype="Number"/>
+            </td>
+            <td><p>m</p></td>
+        </tr>
+        <tr> 
+            <th>Durée</th>
+            <td>
+                <input style="width:40%;" type="number" name="system.duration" value="{{system.duration}}" data-dtype="Number"/>
+            </td>
+            <td><p>sec.</p></td>
+        </tr>
+        <tr>
+            <th>Cible</th>
+            <td>
+                <input style="width:40%;" type="number" name="system.target" value="{{system.target}}" data-dtype="Number"/>
+            </td>
+        </tr>
+    </table>
+</div>

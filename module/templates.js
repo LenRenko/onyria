@@ -43,7 +43,10 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/onyria/templates/items/parts/details/ranged-details.hbs",
         "systems/onyria/templates/items/parts/details/origines-details.hbs",
         "systems/onyria/templates/items/parts/details/equipment-details.hbs",
-        "systems/onyria/templates/items/parts/details/weapon-details.hbs"
+        "systems/onyria/templates/items/parts/details/weapon-details.hbs",
+        "systems/onyria/templates/items/parts/details/spell-details.hbs",
+        "systems/onyria/templates/items/parts/details/trait-details.hbs",
+        "systems/onyria/templates/items/parts/details/savoir-details.hbs"
     ];
 
     // Load the template parts

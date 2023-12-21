@@ -69,7 +69,7 @@ Hooks.once("init", async function () {
 
     // Register item sheets
     Items.registerSheet("onyria", OnyriaItemSheet, {
-        types: ["item", "competence", "profession", "origine"],
+        types: ["item", "competence", "profession", "origine", "spell", "trait", "savoir"],
         makeDefault: true,
         label: "ONYRIA.SheetClassItem"
     });

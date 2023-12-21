@@ -42,18 +42,17 @@ ONYRIA.itemSubCategories = {
 // Languages
 ONYRIA.languages = {
     "common": "ONYRIA.languages.Common",
-    "kohestien": "ONYRIA.languages.Kohestien",
-    "aqab": "ONYRIA.languages.Aqab",
-    "staum": "ONYRIA.languages.Staum",
-    "osmanlien": "ONYRIA.languages.Osmanlien",
-    "mon": "ONYRIA.languages.Mon",
-    "nok": "ONYRIA.languages.Nok",
-    "carredass": "ONYRIA.languages.Carredass",
-    "blanc": "ONYRIA.languages.Blanc",
-    "knigien": "ONYRIA.languages.Knigien",
-    "esperan": "ONYRIA.languages.Esperan",
-    "altabiancais": "ONYRIA.languages.Altabiancais",
-    "altanegrais": "ONYRIA.languages.Altanegrais"
+    "pondunien": "ONYRIA.languages.Pondunien",
+    "arsinor": "ONYRIA.languages.Arsinor",
+    "seranide": "ONYRIA.languages.Seranide",
+    "myrmune": "ONYRIA.languages.Myrmune",
+    "lavyre": "ONYRIA.languages.Lavyre",
+    "puncor": "ONYRIA.languages.Puncor",
+    "yuadim": "ONYRIA.languages.Yuadim",
+    "inconnue": "ONYRIA.languages.Inconnue",
+    "selisien": "ONYRIA.languages.Selisien",
+    "armancien": "ONYRIA.languages.Armancien",
+    "astorien": "ONYRIA.languages.Astorien"
   };
 
 ONYRIA.professions = [];
@@ -145,6 +144,45 @@ ONYRIA.getCompetencesSpe = async function () {
 ONYRIA.itemTypes = {
     "origine": "ONYRIA.category.origines",
     "profession": "ONYRIA.category.profession",
-    "competence": "ONYRIA.category.competence"
+    "competence": "ONYRIA.category.competence",
+    "spell": "ONYRIA.category.spell",
+    "trait": "ONYRIA.category.trait",
+    "savoir": "ONYRIA.category.savoir"
 };
 
+
+ONYRIA.spellTypes = {
+    "offensif": "ONYRIA.magic.type.offensif",
+    "defensif": "ONYRIA.magic.type.defensif",
+    "support": "ONYRIA.magic.type.support",
+    "materialisation": "ONYRIA.magic.type.materialisation",
+    "invocation": "ONYRIA.magic.type.invocation",
+    "rituel": "ONYRIA.magic.type.rituel",
+    "control": "ONYRIA.magic.type.control"
+}
+
+ONYRIA.spellSchools = {
+    "arsin": "ONYRIA.magic.school.arsin",
+    "ingramor": "ONYRIA.magic.school.ingramor",
+    "obscuris": "ONYRIA.magic.school.obscuris",
+    "alaham": "ONYRIA.magic.school.alaham",
+    "polurah": "ONYRIA.magic.school.polurah",
+    "marsino": "ONYRIA.magic.school.marsino",
+    "myrthur": "ONYRIA.magic.school.myrthur",
+    "vesara": "ONYRIA.magic.school.vesara"
+}
+
+ONYRIA.charStats = {
+    "fo" : "ONYRIA.stats.fo.label",
+    "at" : "ONYRIA.stats.at.label",
+    "in" : "ONYRIA.stats.in.label",
+    "pe" : "ONYRIA.stats.pe.label",
+    "di" : "ONYRIA.stats.di.label",
+    "ct" : "ONYRIA.stats.ct.label",
+    "ch" : "ONYRIA.stats.ch.label",
+    "lc" : "ONYRIA.stats.lc.label",
+    "cac": "ONYRIA.stats.cac.label",
+    "dis": "ONYRIA.stats.dis.label",
+    "mag": "ONYRIA.stats.mag.label",
+    "esq": "ONYRIA.stats.esq.label"
+}
