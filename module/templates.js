@@ -9,6 +9,7 @@ export const preloadHandlebarsTemplates = async function () {
     const templatePaths = [
         // ACTOR
         "systems/onyria/templates/actors/character/parts/character-header.hbs",
+        "systems/onyria/templates/actors/character/parts/character-description.hbs",
         
         "systems/onyria/templates/actors/character/parts/stats/character-attacks.hbs",
         "systems/onyria/templates/actors/character/parts/stats/character-hp.hbs",

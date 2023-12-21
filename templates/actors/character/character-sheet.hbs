@@ -9,22 +9,7 @@
     <div class="wrap onyria-bg-modern">
     {{/if}}   
 
-        <div class="header">
-            <div class="flexrow no-wrap">
-                <div class="flex1 left" id="banner-left"></div>
-                    {{#if (isOnyriaTypeSetting "onyria")}}
-                    <div class="flex1 center" id="logo-banner"><img src="/systems/onyria/ui/couronne.png"/></div>
-                    {{/if}}
-                    {{#if (isOnyriaTypeSetting "stars")}}
-                    <div class="flex1 center" id="logo-stars"><img src="/systems/onyria/ui/STARS.webp"/></div>
-                    {{/if}}
-                    {{#if (isOnyriaTypeSetting "contemporain")}}
-                    <div class="flex1 center" id="logo-modern"><img src="/systems/onyria/ui/contemporain.webp"/></div>
-                    {{/if}}                   
-                <div class="flex1 right" id="banner-right"></div>
-            </div>
-        </div>
-        
+
 {{> "systems/onyria/templates/actors/character/parts/character-header.hbs"}}
 
     {{#if (isOnyriaTypeSetting "onyria")}}
@@ -42,6 +27,7 @@
                     <a class="item titleFont" data-tab="stats">{{ localize "ONYRIA.tabs.stats" }}</a>
                     <a class="item titleFont" data-tab="competences">{{ localize "ONYRIA.tabs.competences" }}</a>
                     <a class="item titleFont" data-tab="inventory">{{ localize "ONYRIA.tabs.inventory" }}</a>
+                    <a class="item titleFont" data-tab="description">{{ localize "ONYRIA.tabs.description" }}</a>
                 </nav>
                 {{!-- Sheet Body --}}
                 <section class="sheet-body" style="overflow: visible;">
@@ -57,19 +43,13 @@
                     <div class="tab inventory" data-group="primary" data-tab="inventory">
                         {{> "systems/onyria/templates/actors/character/parts/inventory/character-inventory.hbs"}}
                     </div>
+                    {{!-- Description Tab --}}
+                    <div class="tab description" data-group="primary" data-tab="description">
+                        {{> "systems/onyria/templates/actors/character/parts/character-description.hbs"}}
+                    </div>
                 </section>
             </div>
         </div>
-
-        {{#if (isOnyriaTypeSetting "onyria")}}
-        <div class="header">
-            <div class="flexrow no-wrap">
-                <div class="flex1 left" id="banner-bot-left"></div>
-                 <div class="flex1 center" id="logo-orbe"><img src="/systems/onyria/ui/orbe.png"/></div>
-                <div class="flex1 right" id="banner-bot-right"></div>
-            </div>
-        </div>
-        {{/if}}
     </div>
 </form>
 

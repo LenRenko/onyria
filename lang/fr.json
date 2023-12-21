@@ -75,8 +75,8 @@
   "ONYRIA.ui.equipable" :  "Équipable",
   "ONYRIA.ui.stackable" : "Empilable",
   "ONYRIA.ui.qtymax" : "Quantité max",
-  "ONYRIA.ui.adventurer" : "AVENTURIER",
-  "ONYRIA.ui.liveordie" : "VIVRE OU SURVIVRE",
+  "ONYRIA.ui.adventurer" : "Nom",
+  "ONYRIA.ui.liveordie" : "Être",
   "ONYRIA.ui.link" : "Liens",
   "ONYRIA.ui.score" : "Score",
   "ONYRIA.ui.language": "Langue",
@@ -111,6 +111,7 @@
   "ONYRIA.details.languages": "Langues",
   "ONYRIA.details.biography": "Biographie",
   "ONYRIA.details.description": "Description",
+  "ONYRIA.details.god": "Divinité",
 
   "ONYRIA.stats.label": "Caractéristiques",
   "ONYRIA.stats.abbrev": "CARAC.",
@@ -191,6 +192,8 @@
   "ONYRIA.attributes.mental.abbrev": "SANT.MENT",
   "ONYRIA.attributes.renown.label": "Renommée",
   "ONYRIA.attributes.renown.abbrev": "REN",
+  "ONYRIA.attributes.ko.label": "Blessure Fatale",
+  "ONYRIA.attributes.ps.label": "Trauma Psycho.",
 
   "ONYRIA.attacks.label": "ATTAQUES",
   "ONYRIA.attacks.name.abbrev" : "Nom",

@@ -138,8 +138,6 @@
       },
       "common": {
         "description": "",
-        "genial": "",
-        "mais": "",
         "attributes": {
           "hp": {
             "key": "hp",
@@ -224,8 +222,10 @@
         "common"
       ],
       "renown": 0,
-      "ko": 0,
-      "ps": 0
+      "ko": false,
+      "ps": false,
+      "god": "",
+      "classLevel": 1
     },
     "npc": {
       "templates": [

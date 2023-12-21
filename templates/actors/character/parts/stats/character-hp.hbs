@@ -1,5 +1,3 @@
-<div class="attrvertalign">
-
 <div class="flexcol no-wrap">
     <div class="flexcol no-wrap">
         <div id="life_icon" class="flex1 center">
@@ -10,11 +8,9 @@
         </div>
     </div>
     <div class="flexcol no-wrap">
-        <div id="hit_icon" class="flex1 center">
-            <input class="{{#if (gte system.attributes.hp.bonus system.attributes.hp.max)}}dead-color{{/if}} field-label-icon-hit field-value  hp_blessure" name="system.attributes.hp.bonus" type="text" value="{{system.attributes.hp.bonus}}" placeholder="Blessure" data-dtype="Number"/>
-        </div>
+            <input class="field-label-icon-hp field-value" name="system.attributes.pm.max" type="text" value="{{system.attributes.pm.max}}" placeholder="HP" data-dtype="Number"/>
         <div class="flex1 center">
-            <div class="field-label">{{ localize 'ONYRIA.attributes.hit.label' }}</div>
+            <div class="field-label">{{ localize 'ONYRIA.attributes.pm.label' }}</div>
         </div>
     </div>
     <div class="flexcol no-wrap">
@@ -25,5 +21,4 @@
             <div class="field-label">{{ localize 'ONYRIA.ui.def' }}</div>
         </div>
     </div>
-</div>
 </div>

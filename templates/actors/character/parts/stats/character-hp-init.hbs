@@ -1,21 +1,66 @@
 <div class="attrvertalign">
+    <table class="flexrow flex4">
+        <tr>
+            <td>
+                <div class="flexcol no-wrap">
+                    <div class="flexcol no-wrap">
+                        <div id="life_icon" class="flex1 center">
+                            <input class="field-label-icon-hp field-value" name="system.attributes.hp.value" type="text" value="{{system.attributes.hp.value}}" placeholder="HP" data-dtype="Number"/>
+                        </div>
+                        <div class="flex1 center">
+                            <div class="field-label">{{ localize 'ONYRIA.attributes.hp.abbrev' }}</div>
+                        </div>
 
-<div class="flexcol no-wrap">
-    <div class="flexcol no-wrap">
-        <div id="life_icon" class="flex1 center">
-            <input class="field-label-icon-hp field-value" name="system.attributes.hp.max" type="text" value="{{system.attributes.hp.max}}" placeholder="HP" data-dtype="Number"/>
-        </div>
-        <div class="flex1 center">
-            <div class="field-label">{{ localize 'ONYRIA.attributes.hp.label' }}</div>
-        </div>
-    </div>
-    <div class="flexcol no-wrap">
-        <div id="protection_icon" class="flex1 center">
-            <input class="field-label-icon-prot field-value" name="system.attributes.def.value" type="text" value="{{system.attributes.def.value}}" placeholder="Protection" data-dtype="Number"/>
-        </div>
-        <div class="flex1 center">
-            <div class="field-label">{{ localize 'ONYRIA.ui.def' }}</div>
-        </div>
-    </div>
-</div>
+                        <div id="protection_icon" class="flex1 center">
+                            <input class="field-label-icon-prot field-value" name="system.attributes.hp.max" type="text" value="{{system.attributes.hp.max}}" placeholder="HP MAX" data-dtype="Number"/>
+                        </div>
+                        <div class="flex1 center">
+                            <div class="field-label">{{ localize 'ONYRIA.attributes.hp.abbrev' }} max</div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="flexcol no-wrap">
+                    <div id="life_icon" class="flex1 center">
+                        <input class="field-label-icon-hp field-value" name="system.attributes.pm.value" type="text" value="{{system.attributes.pm.value}}" placeholder="PM" data-dtype="Number"/>
+                    </div>
+                    <div class="flex1 center">
+                        <div class="field-label">{{ localize 'ONYRIA.attributes.pm.abbrev' }}</div>
+                    </div>
+
+                    <div id="protection_icon" class="flex1 center">
+                        <input class="field-label-icon-prot field-value" name="system.attributes.pm.max" type="text" value="{{system.attributes.pm.max}}" placeholder="PM MAX" data-dtype="Number"/>
+                    </div>
+                    <div class="flex1 center">
+                        <div class="field-label">{{ localize 'ONYRIA.attributes.pm.abbrev' }} max</div>
+                    </div>
+                </div>
+            </td>
+            <td>
+               <div class="flexcol no-wrap">
+
+               </div>
+            </td>
+            <td>
+                <div class="flexcol no-wrap">
+                    <div id="protection_icon" class="flex1 center">
+                       <label class="checkbox"><input type="checkbox" name="system.attributes.ko" {{checked system.attributes.ko}}></label>
+                    </div>
+                    <div class="flex1 center">
+                        <div class="field-label">{{ localize 'ONYRIA.attributes.ko.label' }}</div>
+                    </div>
+
+                    <div id="protection_icon" class="flex1 center">
+                        <label class="checkbox"><input type="checkbox" name="system.attributes.ps" {{checked system.attributes.ps}}></label>
+                    </div>
+                    <div class="flex1 center">
+                        <div class="field-label">{{ localize 'ONYRIA.attributes.ps.label' }}</div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
 </div>
