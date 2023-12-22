@@ -1,0 +1,19 @@
+<div class="flexrow no-wrap carac_row">
+    <div class="caracname">
+            <div class="flex1 rollable no-wrap" data-rolling="{{ localize system.stats.charisme.label }}" data-roll-type="skillcheck" data-rolling-value="{{system.stats.charisme.base}}">
+                <div class="flexrow no-wrap  carac_label">
+                    <div class="icon_d100" title="{{ localize system.stats.charisme.label }}">
+                    </div>
+                    <div class="field-label no-wrap left" title="{{ localize system.stats.charisme.label }}">
+                        {{ localize system.stats.charisme.label }}
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="flex1 center cell caracvalue">
+        <input class="field-value" name="system.stats.charisme.base" type="text" value="{{system.stats.charisme.base}}" data-dtype="Number"/>
+        {{#if (isEnabled "carac100")}}
+        <div class="flex1 capa_percent"></div>
+        {{/if}} 
+    </div>
+</div>

@@ -1,23 +1,26 @@
 
-<div class="attrvertalign col_carac">
- <div class="carac_block" >
-        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-str.hbs"}}
-        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-dex.hbs"}}
-        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-end.hbs"}}
-        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-int.hbs"}}
-        {{#if (isOnyriaTypeSetting "onyria")}}
-        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-cha.hbs"}}
-        {{/if}}
-        {{#if (isOnyriaTypeSetting "stars")}}
-        {{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-intu.hbs"}}
-        {{/if}}
+ <div>
+     <table style="width:100%;">
+          <tr style="width:100%;">
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-fo.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-di.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-cac.hbs"}}</td>
+          </tr>
+          <tr>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-at.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-ct.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-dis.hbs"}}</td>
+          </tr>
+          <tr>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-in.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-ch.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-mag.hbs"}}</td>
+          </tr>
+          <tr>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-pe.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-lc.hbs"}}</td>
+               <td>{{> "systems/onyria/templates/actors/character/parts/stats/attributes/character-attributes-esq.hbs"}}</td>
+          </tr>
+     </table>
 </div>
-
-{{#if (isEnabled "carac100")}}
-{{else}}
-     <div class="calc-comp"><i class="fas fa-address-card"></i><span class="calc-comp-tooltip"><p>Calcul automatique des compétence</p></span></div>
-{{/if}}  
-
-</div>
-
 
