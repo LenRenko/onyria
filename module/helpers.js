@@ -295,4 +295,8 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('isActorDiscard', function (actor, handId) {
         return actor.getDefaultDiscard().id == handId;
     });
+
+    Handlebars.registerHelper('isGM', function () {
+        return game.user.isGM;
+    });
 }

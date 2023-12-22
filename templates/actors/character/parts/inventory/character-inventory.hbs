@@ -3,20 +3,20 @@
     {{#if (isOnyriaTypeSetting "onyria")}}
      <div class="flex1 center">Bourse</div>
     <div class="flex1 center coin">
-        <i title="Couronne" class="fas fa-coins" style="color:goldenrod"></i>
-        <input class="field-value coin-field" name="system.currency.gp.qty" type="number" value="{{system.currency.gp.qty}}" placeholder="Couronne" data-dtype="Number"/>
+        <i title="Pièce d'Or" class="fas fa-coins" style="color:goldenrod"></i>
+        <input class="field-value coin-field" name="system.currency.gp.qty" type="number" value="{{system.currency.gp.qty}}" placeholder="Pièce d'Or" data-dtype="Number"/>
     </div>
     <div class="flex1 center coin">
-        <i title="Orbe" class="fas fa-coins" style="color:silver"></i>
-        <input class="field-value center coin-field" name="system.currency.sp.qty" type="number" value="{{system.currency.sp.qty}}" placeholder="Orbe" data-dtype="Number"/>
+        <i title="Pièce d'Argent" class="fas fa-coins" style="color:silver"></i>
+        <input class="field-value center coin-field" name="system.currency.sp.qty" type="number" value="{{system.currency.sp.qty}}" placeholder="Pièce d'Argent" data-dtype="Number"/>
     </div>
     <div class="flex1 center coin">
-        <i title="Sceptre" class="fas fa-coins" style="color:saddlebrown"></i>
-        <input class="field-value coin-field" name="system.currency.cp.qty" type="number" value="{{system.currency.cp.qty}}" placeholder="Sceptre" data-dtype="Number"/>
+        <i title="Pièce de Bronze" class="fas fa-coins" style="color:saddlebrown"></i>
+        <input class="field-value coin-field" name="system.currency.cp.qty" type="number" value="{{system.currency.cp.qty}}" placeholder="Pièce de Bronze" data-dtype="Number"/>
     </div>
         <div class="flex1 center coin">
-        <i title="Roi" class="fas fa-coins" style="color:dimgray"></i>
-        <input class="field-value coin-field" name="system.currency.fp.qty" type="number" value="{{system.currency.fp.qty}}" placeholder="Roi" data-dtype="Number"/>
+        <i title="Pièce de Fer" class="fas fa-coins" style="color:dimgray"></i>
+        <input class="field-value coin-field" name="system.currency.fp.qty" type="number" value="{{system.currency.fp.qty}}" placeholder="Pièce de Fer" data-dtype="Number"/>
     </div>
 
     {{else}}
@@ -45,17 +45,15 @@
             <div class="item-detail">Equiper</div>
              {{!-- <div class="item-detail">Roll</div>--}}
             <div class="item-controls">
-                <a class="item-control item-create new-item" title="Ajouter un objet"><i class="fas fa-plus"></i></a>   
-        {{#if (isOnyriaTypeSetting "onyria")}}
+            {{#if (isGM)}}
+                <a class="item-control item-create new-item" title="Ajouter un objet"><i class="fas fa-plus"></i></a>
+            {{/if}}
+            {{#if (isOnyriaTypeSetting "onyria")}}
                 <a class="item-control item-create onyria-compendium-pack" data-pack="onyria.arme" data-open="0" title="Ajouter un objet">
-        {{/if}}
-        {{#if (isOnyriaTypeSetting "stars")}}
-                <a class="item-control item-create onyria-compendium-pack" data-pack="onyria.objetsstars" data-open="0" title="Ajouter un objet">
-        {{/if}}
-        {{#if (isOnyriaTypeSetting "contemporain")}}
-                <a class="item-control item-create onyria-compendium-pack" data-pack="onyria.objetscont" data-open="0" title="Ajouter un objet">
-        {{/if}} 
+            {{/if}}
+            {{#if (isGM)}}
                     <i class="fas fa-folder-plus"></i>
+            {{/if}}
                 </a>
             </div>
         </li>
