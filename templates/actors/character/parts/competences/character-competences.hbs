@@ -1,6 +1,6 @@
 <div class="flexcol">
     <div class="flexrow competence_row">
-        <div class="flexcol">
+        {{!-- <div class="flexcol">
             <ol class="inventory-list competence-list">
                 <li class="inventory-header flexrow">
                     <div class="item-name flexrow">{{ localize "ONYRIA.ui.skill" }}</div>
@@ -45,7 +45,7 @@
                     </ol>
                 {{/each}}
             </ol>
-        </div>
+        </div> --}}
         
         <div class="flexcol">
             <ol class="inventory-list competence-list">
@@ -60,16 +60,37 @@
                     <div class="item-detail competence-col-width">Bonus</br>Malus</div>
                     {{/if}}
                 </li>
-                {{#each (getCompetencesSpe actor.items) as |competence id|}}
+                {{#each (getCompetencesSpe actor) as |competence id|}}
                     <ol class="item-list">
                         <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
                             <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
                                 <div class="flexrow no-wrap ">
                                     <div class="icon_d100">
                                     </div>
-                                    <div class="field-label no-wrap left competence_name">{{competence.name}}
+                                    <div class="field-label no-wrap left competence_name">[{{competence.system.level}}]({{competence.system.cost}}) - {{competence.name}}
                                         <span class="compspe_tooltiptext">
-                                            <h1>{{competence.name}} :</h1>{{{competence.system.description}}}
+                                            <h1>{{competence.name}}</h1>
+                                            <span>
+                                                <table>
+                                                    <tr>
+                                                        <th>Niveau</th>
+                                                        <th>Type</th>
+                                                        <th>Cout</th>
+                                                        <th>Cible</th>
+                                                        <th>Portée</th>
+                                                        <th>Durée</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{{competence.system.level}}}</td>
+                                                        <td>{{{competence.system.type}}}</td>
+                                                        <td>{{{competence.system.cost}}}</td>
+                                                        <td>{{{competence.system.target}}}</td>
+                                                        <td>{{{competence.system.range}}}</td>
+                                                        <td>{{{competence.system.duration}}}</td>
+                                                    </tr>
+                                                </table>
+                                                {{{competence.system.description}}}
+                                            </span>
                                         </span>
                                     </div>
                                 </div>

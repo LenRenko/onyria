@@ -226,6 +226,7 @@
       "ko": false,
       "ps": false,
       "god": "",
+      "level": 1,
       "classLevel": 1
     },
     "npc": {
@@ -345,7 +346,8 @@
       "range": 0,
       "target": 0,
       "duration": 0,
-      "effect": ""
+      "effect": "",
+      "level": 0
     },
     "trait": {
       "templates": [

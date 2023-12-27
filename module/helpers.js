@@ -116,12 +116,14 @@ export const registerHandlebarsHelpers = function () {
         return caps_normal;
     });
 
-    Handlebars.registerHelper('getCompetencesSpe', function (items) {
-        let caps = items.filter(item => item.type === "spell").sort(function (a, b) {
+    Handlebars.registerHelper('getCompetencesSpe', function (actor) {
+        let caps = actor.items.filter(item => item.type === "spell").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
-          
-          return caps;
+        
+        let spell_comp = caps.filter(item => item.system.level <= actor.system.level);
+        
+        return spell_comp;
     });
 
     Handlebars.registerHelper('getSavoirs', function (items) {
