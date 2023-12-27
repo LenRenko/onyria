@@ -1,123 +1,106 @@
-<div class="flexrow competence_row">
-    <div class="flexcol">
-        <ol class="inventory-list competence-list">
-            <li class="inventory-header flexrow">
-                <div class="item-name flexrow">{{ localize "ONYRIA.ui.skill" }}</div>
-                {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
-                {{else}}
-                <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.link" }}</div>
-                {{/if}}  
-                <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.score" }}</div>
-                {{#if (isEnabled "showBonusCol")}}
-                <div class="item-detail competence-col-width">Bonus</br>Malus</div>
-                {{/if}} 
-				{{#if (isEnabled "allowEditComp")}}
-                <div class="item-controls competence-col-width">
-                    <a class="item-control item-create new-capa " title="Ajouter une compétence"><i class="fas fa-plus"></i></a>   
-                {{#if (isOnyriaTypeSetting "onyria")}}
-                    <a class="item-control item-create onyria-compendium-pack" title="Ajouter une compétence du compendium" data-pack="onyria.competences" data-open="0">
-                {{/if}}
-                {{#if (isOnyriaTypeSetting "stars")}}
-                    <a class="item-control item-create onyria-compendium-pack" title="Ajouter une compétence du compendium" data-pack="onyria.competencesstars" data-open="0">
-                {{/if}}
-                {{#if (isOnyriaTypeSetting "contemporain")}}
-                    <a class="item-control item-create onyria-compendium-pack" title="Ajouter une compétence du compendium" data-pack="onyria.competencescont" data-open="0">
-                {{/if}}
-                        <i class="fas fa-folder-plus"></i>
-                    </a>
-                </div>
-				{{/if}}
-            </li>
-            {{#each (getCompetences actor.items) as |competence id|}}
-                <ol class="item-list">
-                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
-                            <div class="flexrow no-wrap ">
-                                <div class="icon_d100">
-                                </div>
-                                <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                    <span class="comp_tooltiptext">
-                                        <h1>{{competence.name}} :</h1>{{{competence.system.description}}}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
-                        {{else}}
-                        <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
-                        {{/if}}  
-
-                        <div class="item-detail flexrow competence-col-width">
-                            <input class="field-value flex1 capa_score" name="competence.system.score" type="text" value="{{competence.system.score}}" placeholder="" data-dtype="Number"/>
-                            <div class="flex1 capa_percent">%</div>
-                        </div>
-                         {{#if (isEnabled "showBonusCol")}}
-                        <div class="item-detail flexrow competence-col-width">
-                            <input class="field-value flex1 capa_bonus" name="competence.system.bonus" type="text" value="{{competence.system.bonus}}" placeholder="0" data-dtype="Number"/>
-                        </div>
-                        {{/if}}
-						{{#if (isEnabled "allowEditComp")}}
-                        <div class="item-controls competence-col-width">
-                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div>
-						{{/if}}
-                    </li>
-                </ol>
-            {{/each}}
-        </ol>
-    </div>
-    
+<div class="flexcol">
+    <div class="flexrow competence_row">
         <div class="flexcol">
-        <ol class="inventory-list competence-list">
-            <li class="inventory-header flexrow">
-                <div class="item-name flexrow">{{ localize "ONYRIA.ui.specialskill" }}</div>
-                {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
-                {{else}}
-                <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.link" }}</div>
-                {{/if}}  
-                <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.score" }}</div>
-                 {{#if (isEnabled "showBonusCol")}}
-                <div class="item-detail competence-col-width">Bonus</br>Malus</div>
-                {{/if}}
-                {{#if (isGM)}}
-                <div class="item-controls competence-col-width">
-                    <a class="item-control item-create new-capa-spe" title="Ajouter une compétence spéciale"><i class="fas fa-plus"></i></a>    
-                </div>
-                {{/if}}
-            </li>
-            {{#each (getCompetencesSpe actor.items) as |competence id|}}
-                <ol class="item-list">
-                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
-                            <div class="flexrow no-wrap ">
-                                <div class="icon_d100">
-                                </div>
-                                <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                    <span class="compspe_tooltiptext">
-                                        <h1>{{competence.name}} :</h1>{{{competence.system.description}}}
-                                    </span>
+            <ol class="inventory-list competence-list">
+                <li class="inventory-header flexrow">
+                    <div class="item-name flexrow">{{ localize "ONYRIA.ui.skill" }}</div>
+                    {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+                    {{else}}
+                    <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.link" }}</div>
+                    {{/if}}  
+                    <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.score" }}</div>
+                    {{#if (isEnabled "showBonusCol")}}
+                    <div class="item-detail competence-col-width">Bonus</br>Malus</div>
+                    {{/if}} 
+                </li>
+                {{#each (getCompetences actor.items) as |competence id|}}
+                    <ol class="item-list">
+                        <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
+                            <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
+                                <div class="flexrow no-wrap ">
+                                    <div class="icon_d100">
+                                    </div>
+                                    <div class="field-label no-wrap left competence_name">{{competence.name}}
+                                        <span class="comp_tooltiptext">
+                                            <h1>{{competence.name}} :</h1>{{{competence.system.description}}}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+                            {{else}}
+                            <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
+                            {{/if}}  
 
-                        {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
-                        {{else}}
-                        <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
-                        {{/if}}
-                        <div class="item-detail flexrow competence-col-width">
-                            <input class="field-value flex1 capa_score" name="competence.system.score" type="text" value="{{competence.system.score}}" placeholder="" data-dtype="Number"/>
-                            <div class="flex1 capa_percent">%</div>
-                        </div>
-                        {{#if (isEnabled "showBonusCol")}}
-                        <div class="item-detail flexrow competence-col-width">
-                            <input class="field-value flex1 capa_bonus" name="competence.system.bonus" type="text" value="{{competence.system.bonus}}" placeholder="0" data-dtype="Number"/>
-                        </div>
-                        {{/if}}
-                    </li>
-                </ol>
-            {{/each}}
-        </ol>
+                            <div class="item-detail flexrow competence-col-width">
+                                <input class="field-value flex1 capa_score" name="competence.system.score" type="text" value="{{competence.system.score}}" placeholder="" data-dtype="Number"/>
+                                <div class="flex1 capa_percent">%</div>
+                            </div>
+                            {{#if (isEnabled "showBonusCol")}}
+                            <div class="item-detail flexrow competence-col-width">
+                                <input class="field-value flex1 capa_bonus" name="competence.system.bonus" type="text" value="{{competence.system.bonus}}" placeholder="0" data-dtype="Number"/>
+                            </div>
+                            {{/if}}
+                        </li>
+                    </ol>
+                {{/each}}
+            </ol>
+        </div>
+        
+        <div class="flexcol">
+            <ol class="inventory-list competence-list">
+                <li class="inventory-header flexrow">
+                    <div class="item-name flexrow">{{ localize "ONYRIA.ui.spell" }}</div>
+                    {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+                    {{else}}
+                    <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.link" }}</div>
+                    {{/if}}  
+                    <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.score" }}</div>
+                    {{#if (isEnabled "showBonusCol")}}
+                    <div class="item-detail competence-col-width">Bonus</br>Malus</div>
+                    {{/if}}
+                </li>
+                {{#each (getCompetencesSpe actor.items) as |competence id|}}
+                    <ol class="item-list">
+                        <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
+                            <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
+                                <div class="flexrow no-wrap ">
+                                    <div class="icon_d100">
+                                    </div>
+                                    <div class="field-label no-wrap left competence_name">{{competence.name}}
+                                        <span class="compspe_tooltiptext">
+                                            <h1>{{competence.name}} :</h1>{{{competence.system.description}}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+                            {{else}}
+                            <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
+                            {{/if}}
+                            <div class="item-detail flexrow competence-col-width">
+                                <input class="field-value flex1 capa_score" name="competence.system.score" type="text" value="{{competence.system.score}}" placeholder="" data-dtype="Number"/>
+                                <div class="flex1 capa_percent">%</div>
+                            </div>
+                            {{#if (isEnabled "showBonusCol")}}
+                            <div class="item-detail flexrow competence-col-width">
+                                <input class="field-value flex1 capa_bonus" name="competence.system.bonus" type="text" value="{{competence.system.bonus}}" placeholder="0" data-dtype="Number"/>
+                            </div>
+                            {{/if}}
+                        </li>
+                    </ol>
+                {{/each}}
+            </ol>
+        </div>
     </div>
 
+    <div class="flexrow">
+        {{!-- Trait --}}
+        {{> "systems/onyria/templates/actors/character/parts/competences/details/character-competences-trait.hbs"}}
+        {{!-- Savoir --}}
+        {{> "systems/onyria/templates/actors/character/parts/competences/details/character-competences-savoir.hbs"}}
+    </div>
 </div>
+
+

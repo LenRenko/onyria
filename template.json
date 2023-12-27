@@ -138,6 +138,7 @@
       },
       "common": {
         "description": "",
+        "notes":"",
         "attributes": {
           "hp": {
             "key": "hp",

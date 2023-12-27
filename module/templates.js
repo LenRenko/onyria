@@ -33,6 +33,8 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/onyria/templates/actors/character/parts/stats/character-stats.hbs",
 
         "systems/onyria/templates/actors/character/parts/competences/character-competences.hbs",
+        "systems/onyria/templates/actors/character/parts/competences/details/character-competences-trait.hbs",
+        "systems/onyria/templates/actors/character/parts/competences/details/character-competences-savoir.hbs",
 
         "systems/onyria/templates/actors/character/parts/inventory/character-inventory.hbs",
         "systems/onyria/templates/actors/character/parts/inventory/character-inventory-item.hbs",

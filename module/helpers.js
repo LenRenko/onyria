@@ -117,13 +117,26 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getCompetencesSpe', function (items) {
-        let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
+        let caps = items.filter(item => item.type === "spell").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
           
-          let caps_special = caps.filter(item => item.system.special === true);
-          return caps_special;
+          return caps;
     });
+
+    Handlebars.registerHelper('getSavoirs', function (items) {
+        let caps = items.filter(item => item.type === "savoir").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+        return caps;
+    });
+
+    Handlebars.registerHelper('getTraits', function(items) {
+        let caps = items.filter(item => item.type === "trait").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+        return caps;
+    })
 
     Handlebars.registerHelper('getWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");

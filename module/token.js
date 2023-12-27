@@ -7,10 +7,10 @@
   getBarAttribute(...args) {
     const data = super.getBarAttribute(...args);
     if ( data && (data.attribute === "attributes.hp") ) {
-      const hpMax = this.actor.system.attributes.hp.max || 10;
-      const hpBonus = this.actor.system.attributes.hp.bonus || 0;
+      const hpMax = this.actor.system.attributes.hp.max || 5;
+      const hp = this.actor.system.attributes.hp.value || 0;
 
-      data.value = ( (hpMax - hpBonus ) || 0);
+      data.value = ( hp || 0);
       data.max = (hpMax || 0);
 
 

@@ -52,7 +52,7 @@
   "ONYRIA.ui.defBase": "Défense (Base)",
   "ONYRIA.ui.defBonus": "Défense (Bonus)",
   "ONYRIA.ui.skill": "Compétence",
-  "ONYRIA.ui.specialskill": "Compétence Speciale",
+  "ONYRIA.ui.specialskill": "Sorts",
   "ONYRIA.ui.skillBonus": "Compétence (Bonus)",
   "ONYRIA.ui.price": "Prix (en PO)",
   "ONYRIA.ui.weight": "Poids",
@@ -80,6 +80,8 @@
   "ONYRIA.ui.link" : "Liens",
   "ONYRIA.ui.score" : "Score",
   "ONYRIA.ui.language": "Langue",
+  "ONYRIA.ui.trait": "Trait",
+  "ONYRIA.ui.savoir": "Savoir",
   "ONYRIA.placeholders.qtymax" : "Quantité infinie si vide",
 
   "ONYRIA.roll.success" : "Succès",
@@ -112,6 +114,7 @@
   "ONYRIA.details.biography": "Biographie",
   "ONYRIA.details.description": "Description",
   "ONYRIA.details.god": "Divinité",
+  "ONYRIA.details.note": "Note",
 
   "ONYRIA.stats.label": "Caractéristiques",
   "ONYRIA.stats.abbrev": "CARAC.",

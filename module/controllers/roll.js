@@ -97,33 +97,6 @@ export class OnyriaRoll {
 
         let globalSettingCarac100 = game.settings.get("onyria","carac100"); 
 
-        if(globalSettingCarac100)
-        {
-            let valTMP = actor.system.stats.str.base +actor.system.stats.dex.base;
-
-            if(valTMP < 41)
-            {
-                formula+='+1';
-            }else{
-                if(valTMP < 81)
-                {
-                    formula+='+2';
-                }else{
-                    if(valTMP < 121)
-                    {
-                        formula+='+3';
-                    }else{
-                        if(valTMP < 141)
-                        {
-                            formula+='+4';
-                        }else{
-                            formula+='+5';
-                        } 
-                    } 
-                }
-            }
-        }
-
         let r = new OnyriaDamageRoll(label,formula,img);
         r.roll(actor,rollType);
     }
