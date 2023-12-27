@@ -88,7 +88,7 @@ export class OnyriaRoll {
      * @param key the key of the attribute to roll
      * @private
      */
-    static rollWeapon(data, actor, event,rollType = "PUBLIC") {
+    static rollWeapon(data, actor, event, rollType = "PUBLIC") {
 
         const elt = $(event.currentTarget)[0];
         let formula = elt.attributes["data-roll-formula"].value;
@@ -98,7 +98,7 @@ export class OnyriaRoll {
         let globalSettingCarac100 = game.settings.get("onyria","carac100"); 
 
         let r = new OnyriaDamageRoll(label,formula,img);
-        r.roll(actor,rollType);
+        r.roll(actor, rollType);
     }
 
         /**

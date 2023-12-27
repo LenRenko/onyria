@@ -347,7 +347,8 @@
       "target": 0,
       "duration": 0,
       "effect": "",
-      "level": 0
+      "level": 0,
+      "dmgBase": ""
     },
     "trait": {
       "templates": [

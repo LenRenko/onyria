@@ -63,7 +63,7 @@
                 {{#each (getCompetencesSpe actor) as |competence id|}}
                     <ol class="item-list">
                         <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                            <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.system.score}}" data-rolling-bonus="{{competence.system.bonus}}" data-roll-type="competencycheck">
+                            <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-roll-formula="{{competence.system.dmgBase}}" data-roll-weapon-name="{{competence.name}}" data-roll-weapon-img="{{competence.img}}" data-roll-type="weapon">
                                 <div class="flexrow no-wrap ">
                                     <div class="icon_d100">
                                     </div>
@@ -79,6 +79,7 @@
                                                         <th>Cible</th>
                                                         <th>Portée</th>
                                                         <th>Durée</th>
+                                                        <th>Dégâts</th>
                                                     </tr>
                                                     <tr>
                                                         <td>{{{competence.system.level}}}</td>
@@ -87,6 +88,7 @@
                                                         <td>{{{competence.system.target}}}</td>
                                                         <td>{{{competence.system.range}}}</td>
                                                         <td>{{{competence.system.duration}}}</td>
+                                                        <td>{{{competence.system.dmgBase}}}</td>
                                                     </tr>
                                                 </table>
                                                 {{{competence.system.description}}}
@@ -107,6 +109,12 @@
                             {{#if (isEnabled "showBonusCol")}}
                             <div class="item-detail flexrow competence-col-width">
                                 <input class="field-value flex1 capa_bonus" name="competence.system.bonus" type="text" value="{{competence.system.bonus}}" placeholder="0" data-dtype="Number"/>
+                            </div>
+                            {{/if}}
+                            {{#if (isGM)}}
+                            <div class="item-controls competence-col-width">
+                                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                             </div>
                             {{/if}}
                         </li>
