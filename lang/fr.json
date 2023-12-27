@@ -82,6 +82,7 @@
   "ONYRIA.ui.language": "Langue",
   "ONYRIA.ui.trait": "Trait",
   "ONYRIA.ui.savoir": "Savoir",
+  "ONYRIA.ui.comp": "Sort et Compétence",
   "ONYRIA.placeholders.qtymax" : "Quantité infinie si vide",
 
   "ONYRIA.roll.success" : "Succès",

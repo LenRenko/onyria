@@ -437,6 +437,15 @@ async getData(options) {
                     if (extraOptions.cancelled) return;
                 }
                 return OnyriaRoll.rollInitiative(this.getData().system, this.actor, event,extraOptions.rollType);
+            
+            case "spell":
+                if(forceConfig)
+                {
+                    configJet.checkGM = true;
+                    extraOptions = await this.getRollOptions("systems/onyria/templates/config/skill-options.hbs","Configuration du jet d'attaque",configJet);
+                    if (extraOptions.cancelled) return;                    
+                }
+                return OnyriaRoll.rollSpell(this.getData().system, this.actor, event, extraOptions.rollType);
         }
     }
 

@@ -101,6 +101,20 @@ export class OnyriaRoll {
         r.roll(actor, rollType);
     }
 
+    static rollSpell(data, actor, event, rollType = "PUBLIC") {
+        const elt = $(event.currentTarget)[0];
+        let formula = elt.attributes["data-roll-formula"].value;
+        let label = elt.attributes["data-roll-weapon-name"].value;
+        let img = elt.attributes["data-roll-weapon-img"].value;
+        let cost = elt.attributes["data-roll-cost"].value;
+        let globalSettingCarac100 = game.settings.get("onyria","carac100"); 
+
+        let r = new OnyriaDamageRoll(label,formula,img);
+
+        actor.system.attributes.pm.value = actor.system.attributes.pm.value - cost;
+        r.roll(actor, rollType);
+    }
+
         /**
      *  Handles initiative check rolls
      * @param elt DOM element which raised the roll event

@@ -50,12 +50,12 @@
         <div class="flexcol">
             <ol class="inventory-list competence-list">
                 <li class="inventory-header flexrow">
-                    <div class="item-name flexrow">{{ localize "ONYRIA.ui.spell" }}</div>
+                    <div class="item-name flexrow">{{ localize "ONYRIA.ui.comp" }}</div>
                     {{#if (or (isOnyriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                     {{else}}
                     <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.link" }}</div>
                     {{/if}}  
-                    <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.score" }}</div>
+                    <div class="item-detail competence-col-width">{{ localize "ONYRIA.ui.dmgBase" }}</div>
                     {{#if (isEnabled "showBonusCol")}}
                     <div class="item-detail competence-col-width">Bonus</br>Malus</div>
                     {{/if}}
@@ -63,7 +63,7 @@
                 {{#each (getCompetencesSpe actor) as |competence id|}}
                     <ol class="item-list">
                         <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                            <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-roll-formula="{{competence.system.dmgBase}}" data-roll-weapon-name="{{competence.name}}" data-roll-weapon-img="{{competence.img}}" data-roll-type="weapon">
+                            <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-roll-formula="{{competence.system.dmgBase}}" data-roll-weapon-name="{{competence.name}}" data-roll-weapon-img="{{competence.img}}" data-roll-cost="{{competence.system.cost}}" data-roll-type="spell">
                                 <div class="flexrow no-wrap ">
                                     <div class="icon_d100">
                                     </div>
@@ -103,8 +103,7 @@
                             <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
                             {{/if}}
                             <div class="item-detail flexrow competence-col-width">
-                                <input class="field-value flex1 capa_score" name="competence.system.score" type="text" value="{{competence.system.score}}" placeholder="" data-dtype="Number"/>
-                                <div class="flex1 capa_percent">%</div>
+                                <h3>{{{competence.system.dmgBase}}}</h3>
                             </div>
                             {{#if (isEnabled "showBonusCol")}}
                             <div class="item-detail flexrow competence-col-width">
